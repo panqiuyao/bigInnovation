@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>创新中心大屏</title>
+      <script type="text/javascript">
+            function  htmlfont(){
+
+                var font_size =  Math.round(window.innerWidth*0.051441);
+                font_size = font_size+'px';
+                document.getElementsByTagName("html")[0].style.fontSize = font_size;
+            }
+            htmlfont();
+            window.onresize = function(){
+                htmlfont();
+
+            }
+        </script>
+
+		<script src="/static/js/config.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
