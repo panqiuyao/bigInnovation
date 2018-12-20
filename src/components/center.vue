@@ -1,11 +1,25 @@
 <template>
-	
+		
   <el-row  :gutter="0">
-			<el-col  :span="6"  class="item-list" v-for="item in list" :key="item.url">
-				  <router-link :to="item.url">
-							<img :src="item.img">
-							<div class="item-title flex">{{item.title}}</div>
-					</router-link>
+			<el-col  :span="8"  class="item-list" v-for="(item,index) in list" :key="item.url">
+					
+					<template v-if="worldMap && item.url.indexOf('videoplay') > 0">
+						    <a href="javascript:void" @click="showvideo(item.url)"> 
+									<img :src="item.img">
+									<div class="item-title flex cententtitle">{{item.title}}</div>
+							</a>
+					</template>
+
+					<template v-else>
+
+						    <router-link :to="item.url"> 
+									<img :src="item.img">
+									<div class="item-title flex cententtitle">{{item.title}}</div>
+							</router-link>
+					</template>
+
+
+				
 						
 			</el-col>
   </el-row>
@@ -26,11 +40,22 @@ export default {
 			this.$store.dispatch('fetchSearch',{data:false})
 			this.$store.dispatch('fetchLogo',{data:true})
 	},
+	mounted(){
+	},
+	computed:{
+		worldMap:() => worldMap
+		
+	},
 	methods:{
 		change(e){
 			var self = this;
 			self.thisIndex++;
 			
+		},
+		showvideo(url){
+			var self = this;
+			var videourl = url.split('/')[2]
+			self.worldMap.doPlayVideo('http://202.91.242.168/video/video'+videourl+'.mp4')
 		}
 	}
 }
@@ -40,6 +65,7 @@ export default {
 
 <style lang="stylus">
 	.el-row .item-list { padding:0 0.175rem}
+	.cententtitle { font-weight:600;}
 	
 </style>
 

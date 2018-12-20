@@ -2,22 +2,24 @@
 <div class="videoplay">
 				
 				<span v-on:click="prevpage()" class="goback"></span>
-
-				<video src="http://202.91.242.168/video/video.mp4" controls="controls" width="100%" autoplay="autoplay"></video>
+	
+		<video :src="videoSrc" controls="controls" width="100%" height="100%" autoplay="autoplay"></video>
+	
 
 	</div>
 </template>
 
 <script>
 export default {
-  name: 'capital',
+  name: 'videoplay',
   data () {
     return {
+    		play:'',
     }
   },
 	computed:{
 		videoSrc(){
-			return   config.staticUrl+'video'+this.$route.params.id+'.png'
+			return  'http://202.91.242.168/video/video'+this.$route.params.id+'.mp4'
 		}
 	},
 	beforeCreate(){
@@ -29,8 +31,17 @@ export default {
 
 	},
 	mounted() {
+			this.init();
 	},
 	methods:{
+		init(){
+
+
+			var self = this; 
+
+
+
+		},
 		prevpage(){
 			this.$router.go(-1)
 		}
@@ -55,7 +66,6 @@ export default {
 	
 }
 .videoplay img { width: 100%; display: block;}
-	
 	
 	.videoplay .goback { width:1rem; height:1rem; position:absolute; left:0; top:0; z-index:100}
 

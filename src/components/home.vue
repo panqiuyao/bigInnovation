@@ -10,7 +10,7 @@
 							</el-col>
 
 
-							<el-col :span="12" class="flex flex-right nav" style="padding-top: .15rem">
+							<el-col :span="12" class="flex flex-right nav" style="padding-top: .25rem">
 									<a :href="right[0].url" class="hundred"></a>
 									<router-link :to="right[1].url" class="center" :class="{ active : navstate == 'center'}"></router-link>
 									<router-link :to="right[2].url" class="comprehensive" :class="{ active : navstate == 'comprehensive'}"></router-link>

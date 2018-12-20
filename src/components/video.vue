@@ -1,6 +1,20 @@
 <template>
 <div class="video flex">
-		<router-link to="/videoplay/1"><img :src="videoSrc"></router-link>
+
+					<template v-if="worldMap">
+						    <a href="javascript:void" @click="showvideo('/videoplay/1')"> 
+									<img :src="videoSrc">
+							</a>
+					</template>
+
+					<template v-else>
+
+								<router-link to="/videoplay/1">
+									<img :src="videoSrc">
+								</router-link>
+					</template>
+
+
 
 	</div>
 </template>
@@ -15,20 +29,25 @@ export default {
 	computed:{
 		videoSrc(){
 			return   config.staticUrl+'video'+this.$route.params.id+'.png'
-		}
+		},
+		worldMap:() => worldMap
 	},
 	beforeCreate(){
 			
 			this.$store.dispatch('fetchBack',{data:true})
-
-
-			this.$store.dispatch('fetchHeaderimg',{data:config.header.left.logoimg})
+			this.$store.dispatch('fetchHeaderimg',{data:config.staticUrl+'video'+this.$route.params.id+'header'+1+'.png'})
+			this.$store.dispatch('fetchSearch',{data:true})
 			this.$store.dispatch('fetchLogo',{data:false})
 
 	},
 	mounted() {
 	},
 	methods:{
+		showvideo(url){
+			var self = this;
+			var videourl = url.split('/')[2]
+			self.worldMap.doPlayVideo('http://202.91.242.168/video/video'+videourl+'.mp4')
+		}
 	}
 }
 </script>

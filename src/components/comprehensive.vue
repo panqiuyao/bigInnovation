@@ -79,7 +79,7 @@ export default {
 	.left-nav   a { display: block; width: 2.25rem; height: 0.7rem; background: fcBg; 
 	 border-radius:0.7rem;
 	 margin: 0.12rem 0;
-	 border:0.025rem solid fcBgB;
+	 border: 0.025rem solid rgba(48,84,135,0.35);
 	 color: fontColor;
 	 font-size: 0.25rem;
 	 text-align: center;
@@ -105,7 +105,7 @@ export default {
 		
 		
 	.left-nav   a:hover { background: fcBgH; color: fcfff;}
-	.left-nav   a.active {background:fcBgA;  border: 0.025rem solid rgba(48,84,135,0.35); }
+	.left-nav   a.active {background:fcBgA;   }
 	.nav-right { height: 3.625rem; position: relative; top:-0.125rem;     }
 	.nav-right .el-carousel {     padding: 0 0.55rem 0 1.0rem;box-sizing: border-box;}
 	.btn-one  .el-carousel__arrow { width: 0.575rem; height: 0.575rem; background-color:rgba(0,0,0,.1)}

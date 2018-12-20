@@ -1,6 +1,6 @@
 <template>
 <div class="capital comprehensive-main">
-		<el-carousel :autoplay="false" arrow="always" class="btn-one">
+		<el-carousel :autoplay="false" arrow="never" class="btn-one">
 			
 			<el-carousel-item >
 				<el-row>

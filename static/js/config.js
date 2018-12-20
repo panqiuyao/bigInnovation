@@ -43,28 +43,23 @@ var config = {
 		"center":[
 			{
 				"img":"/static/images/center1.png",
-				"title":"创新中心宣传片",
+				"title":"视频介绍",
 				"url":"/videoplay/1"
 			},
 			{
 				"img":"/static/images/center2.png",
-				"title":"创新中心宣传PPT",
+				"title":"创新中心简介",
 				"url":"/centercon/center2/11",
 			},
 			{
 				"img":"/static/images/center3.png",
-				"title":"宁波创新中心",
-				"url":"/home/images/1"
-			},
-			{
-				"img":"/static/images/center4.png",
-				"title":"西安创新中心",
+				"title":"部分创新中心",
 				"url":"/home/images/1"
 			}
 		],
 		//综合服务
 		"comprehensive":{
-			"title":"四链融合,为区域产业提供综合服务",
+			"title":"四链融合，为区域产业提供综合服务",
 			//创新链
 			"children":[
 				{
@@ -75,34 +70,33 @@ var config = {
 					
 						{
 							"title":"全球创新创业</br>大赛",
-							"bgColor":"#3971bf",
-							"url":"/home/video/3"
-						},
-						{
-							"title":"全球细分领域</br>产业化论坛",
-							"bgColor":"#36a8b3",
+							"bgColor":"#1162a3",
 							"url":"/home/video/1"
 						},
 						{
-							"title":"全球创新项目路演",
-							"bgColor":"#493dcc",
-							"url":"/home/video/4"
+							"title":"双优工程",
+							"bgColor":"#364fa8",
+							"url":"/home/comcon/innovation2/4"
+						},
+						{
+							"title":"全球细分领域</br>产业化论坛",
+							"bgColor":"#4d63b1",
+							"url":"/home/video/3"
 						},
 						{
 							"title":"全球技术</br>转移平台",
-							"bgColor":"#b35f36",
-							"url":"/home/images/1"
+							"bgColor":"#409957",
+							"url":"/home/comcon/innovation4/1"
+						},
+						{
+							"title":"全球创新</br>项目路演",
+							"bgColor":"#048381",
+							"url":"/home/video/5"
 						},
 						{
 							"title":"全球创新</br>技术展示",
-							"bgColor":"#b39e36",
-							"url":"/home/images/1"
-						},
-							
-						{
-							"title":"全球创新创业</br>大赛",
-							"bgColor":"#3971bf",
-							"url":"/home/images/1"
+							"bgColor":"#72a751",
+							"url":"/home/comcon/innovation6/1"
 						}
 					]
 				},
@@ -116,58 +110,47 @@ var config = {
 						{
 							"title":"3D设计</br>服务",
 							"bgColor":"#1162a2",
-							"url":"/home/images/1"
+							"url":"/home/comcon/industry1/2"
 						},
 						{
-							"title":"3D打印</br>服务",
+							"title":"3D云打印</br>服务",
 							"bgColor":"#364ea8",
-							"url":"/home/comcon/industry2/1",
-							"headerimg":"/static/imagesindustry2header.png",
+							"url":"/home/comcon/industry2/1"
 						},
 						{
 							"title":"Human</br>2.0",
 							"bgColor":"#1164a5",
-							 "url":"/home/images/1"
+							"url":"/home/comcon/industry3/1"
 						},
 						{
 							"title":"智慧仓储</br>物流服务",
-							"bgColor":"#4d64b2",
-							"url":"/home/comcon/industry4/1",
-							"headerimg":"/static/imagesindustry4header.png",
+							"bgColor":"#06857e",
+							"url":"/home/comcon/industry4/1"					
 						},
 						{
 							"title":"精准数字</br>营销服务",
-							"bgColor":"#038684",
-							 "url":"/home/images/1"
-						},
-						{
-							"title":"生态链</br>协同服务",
-							"bgColor":"#3651a9",
+							"bgColor":"#419756",
 							 "url":"/home/images/1"
 						},
 						{
 							"title":"产品全生命周期管理服务",
-							"bgColor":"#409957",
-							"url":"/home/comcon/industry7/1",
-							"headerimg":"/static/imagesindustry7header.png",
+							"bgColor":"#1266a6",
+							"url":"/home/comcon/industry7/1"
 						},
 						{
-							"title":"自动化流水线服务",
-							"bgColor":"#72a751",
-							"url":"/home/comcon/industry8/1",
-							"headerimg":"/static/imagesindustry8header.png",
+							"title":"自动化</br>流水线服务",
+							"bgColor":"#3752ad",
+							"url":"/home/comcon/industry8/3"
 						},
 						{
-							"title":"供应链管理服务",
-							"bgColor":"#405aa1",
-							"url":"/home/comcon/industry9/1",
-							"headerimg":"/static/imagesindustry9header.png",
+							"title":"供应链智慧管理服务",
+							"bgColor":"#3f59a3",
+							"url":"/home/comcon/industry9/1"
 						},
 						{
-							"title":"红杉树</br>数字双胞胎",
+							"title":"数字孪生",
 							"bgColor":"#1168aa",
-							"url":"/home/comcon/industry10/1",
-							"headerimg":"/static/imagesindustry10header.png",
+							"url":"/home/comcon/industry10/1"
 						}	,
 						{
 							"title":"阿里云+</br>工业大脑+</br>物联网",
@@ -175,9 +158,9 @@ var config = {
 							 "url":"/home/images/1"
 						}	,
 						{
-							"title":"5G基础网络+</br>Edge边缘计算",
+							"title":"5G基础网络+</br>Edge Computing",
 							"bgColor":"#4d62b0",
-							 "url":"/home/images/1"
+							"url":"/home/comcon/industry12/1"
 						}	
 					]
 				},
@@ -190,7 +173,7 @@ var config = {
 						{
 							"title":"海外交流营",
 							"img":"/static/images/personnel1.png",
-							"url":"/home/images/3"
+							"url":"/home/comcon/personnel1/1"
 						},
 						{
 							"title":"工匠学院",
@@ -200,17 +183,17 @@ var config = {
 						{
 							"title":"海高人才引进",
 							"img":"/static/images/personnel3.png",
-							"url":"/home/images/2"
+							"url":"/home/comcon/personnel3/1"
 						},
 						{
 							"title":"企业内训平台",
 							"img":"/static/images/personnel4.png",
-							"url":"/home/video/4"
+							"url":"/home/video/14"
 						},
 						{
-							"title":"在线教育陪训",
+							"title":"在线教育培训",
 							"img":"/static/images/personnel5.png",
-							"url":"/home/video/2"
+							"url":"/home/video/15"
 						}
 						
 					]
@@ -224,39 +207,27 @@ var config = {
 					{
 						"title":"产业基金",
 						"img":"/static/images/capital1.png",
-						"url":"/home/comcon/capital1/1",
-						"headerimg":"/static/images/capital1header.png",
+						"url":"/home/comcon/capital1/1"
 					},
 					{
 						"title":"共创式投资",
 						"img":"/static/images/capital2.png",
-						"url":"/home/comcon/capital2/1",
-						"headerimg":"/static/images/capital2header.png",
+						"url":"/home/comcon/capital2/1"
 					},
 					{
 						"title":"国际并购",
 						"img":"/static/images/capital3.png",
-						"url":"/home/comcon/capital3/1",
-						"headerimg":"/static/images/capital3header.png",
+						"url":"/home/comcon/capital3/1"
 					},
 					{
 						"title":"小微金融",
 						"img":"/static/images/capital4.png",
-						"url":"/home/comcon/capital4/1",
-						"headerimg":"/static/images/capita41header.png",
-						"children":[
-							{
-							"title":"猪八戒：小微金融",
-							"url":"/home/comcon/capital4_1/1",
-							"headerimg":"/static/images/capita4_11header.png",
-							}
-						]
+						"url":"/home/comcon/capital4/2"
 					},
 					{
 						"title":"科技金融",
 						"img":"/static/images/capital5.png",
-						"url":"/home/comcon/capital5/1",
-						"headerimg":"/static/images/capital5header.png",
+						"url":"/home/comcon/capital5/1"
 					}
 				  ]	
 				}
