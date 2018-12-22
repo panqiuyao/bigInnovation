@@ -1,22 +1,38 @@
 <template>
 	
 	<div class="personnel comprehensive-main">
-		<el-carousel :autoplay="false" arrow="always" class="btn-one">
+		<el-carousel :autoplay="false" arrow="always"  :initial-index="$route.query.page" :loop="false"  class="btn-one"  @change="change">
 			
-			<el-carousel-item >
-				<el-row>
+			<el-carousel-item class="is-animating">
+				<el-row >
 						<el-col  :span="8"  class="item-list">
 								<router-link :to="list[0].url">
 										<img :src="list[0].img">
 										<div class="item-title flex">{{list[0].title}}</div>
 								</router-link>
 						</el-col>
+
+
+					<template v-if="worldMap ">
+
+						<el-col  :span="8"  class="item-list">
+								<a href="javascript:void" @click="showvideo(list[1].url)">
+										<img :src="list[1].img">
+										<div class="item-title flex">{{list[1].title}}</div>
+								</a>
+						</el-col>
+					</template>
+
+					<template v-else>
+
 						<el-col  :span="8"  class="item-list">
 								<router-link :to="list[1].url">
 										<img :src="list[1].img">
 										<div class="item-title flex">{{list[1].title}}</div>
 								</router-link>
 						</el-col>
+					</template>
+
 						<el-col  :span="8"  class="item-list">
 								<router-link :to="list[2].url">
 										<img :src="list[2].img">
@@ -26,14 +42,8 @@
 				</el-row>
 			</el-carousel-item>
 			
-			<el-carousel-item >
-				<el-row >
-						<el-col  :span="8"  class="item-list">
-								<router-link :to="list[2].url">
-										<img :src="list[2].img">
-										<div class="item-title flex">{{list[2].title}}</div>
-								</router-link>
-						</el-col>
+			<el-carousel-item class="is-animating">
+				<el-row>
 						<el-col  :span="8"  class="item-list">
 								<router-link :to="list[3].url">
 										<img :src="list[3].img">
@@ -45,6 +55,8 @@
 										<img :src="list[4].img">
 										<div class="item-title flex">{{list[4].title}}</div>
 								</router-link>
+						</el-col>
+						<el-col  :span="8"  class="item-list">
 						</el-col>
 				</el-row>
 			</el-carousel-item>
@@ -63,14 +75,24 @@ export default {
     }
   },
 	beforeCreate(){
-						this.$store.dispatch('fetchLeftnav',{data:"personnel"})
-						
+		this.$store.dispatch('fetchLeftnav',{data:"personnel"})
 	},
 	computed:{
+		worldMap:() => worldMap
 	},
 	mounted() {
 	},
 	methods:{
+		change(e){
+			var self = this;
+			this.$router.push({path: '/home/comprehensive/personnel', query: {page: e}})
+			
+		},
+		showvideo(url){
+			var self = this;
+			var videourl = url.split('/')[2]
+			self.worldMap.doPlayVideo('http://202.91.242.168/video/video'+videourl+'.mp4')
+		}
 	}
 }
 </script>

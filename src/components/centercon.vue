@@ -11,7 +11,7 @@
 
 
 			  <div class="start wmain centercon">
-			    <el-carousel height="100%" :autoplay="false" :interval="3000" arrow="always" class="wmain" @change="change">
+			    <el-carousel height="100%" :autoplay="false" :interval="3000" :loop="false"  arrow="always" class="wmain" @change="change">
 			      <el-carousel-item v-for="item in imagesSrc" :key="item" >
 							<img :src="item" width="100%" height="100%">
 			      </el-carousel-item>
@@ -33,13 +33,11 @@ export default {
   },
 	computed:{
 		num(){
-
 			return   this.$route.params.num
 		},
 		imagesSrc(){
 			var self = this;
 			if(self.num == 1){
-
 				return   config.staticUrl+this.$route.params.id+'img'+self.num+'.png'
 			}else{
 				var arr = []
@@ -56,8 +54,6 @@ export default {
 			this.$store.dispatch('fetchNav',{data:"center"})
 			this.$store.dispatch('fetchSearch',{data:false})
 			this.$store.dispatch('fetchLogo',{data:false})
-
-
 	},
 	mounted() {
 		
@@ -91,7 +87,6 @@ export default {
 .centercon .el-carousel__indicators { display:none; }
 .centercon img { width: 100%; display: block; }
 .centercon	.el-carousel__arrow--left  {
-
 	    position: absolute;
     width: 50%;
     height: 100%;
@@ -99,17 +94,20 @@ export default {
     background:none;
 }
 .centercon	.el-carousel__arrow--right  {
-
 	    position: absolute;
     width: 50%;
     height: 100%;
     right: 0;
     background:none;
 }
-
 	.centercon	.el-carousel__arrow--left  i,
 	.centercon	.el-carousel__arrow--right  i { display:none;}
 	.centercon .goback { width:1rem; height:1rem; position:absolute; left:0; top:0; z-index:100}
 
-</style>
 
+    .centercon .el-carousel__item { opacity:0; transform: translateX(0) scale(1) !important;
+
+		transition: all 0.5s ease-in-out !important;
+    }
+   .centercon  .el-carousel__item.is-active { opacity:1;}
+</style>

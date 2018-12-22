@@ -73,7 +73,7 @@ export default {
 	},
 	methods:{
 		prevpage(){
-			this.$router.go(-1)
+			this.$router.back(-1)
 		}
 	}
 	

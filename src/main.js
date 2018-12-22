@@ -8,7 +8,6 @@ import store from './store'
 Vue.config.productionTip = false
 
 
-
 import { Carousel, CarouselItem , Row , Col } from 'element-ui';
 
 Vue.use(Row);

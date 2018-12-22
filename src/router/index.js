@@ -15,7 +15,6 @@ import video from '@/components/video'
 import videoplay from '@/components/videoplay'
 
 import comcon from '@/components/comcon'
-import comcon1 from '@/components/comcon1'
 import personnel3 from '@/components/personnel3'
 
 
@@ -122,13 +121,6 @@ export default new Router({
 								name: 'comcon',
 								meta:{index:120000},
 								component: comcon
-							},
-							{
-								//图片轮播
-								path: 'comcon1/:id/:num',
-								name: 'comcon1',
-								meta:{index:120001},
-								component: comcon1
 							},
 							{
 								//视频

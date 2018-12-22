@@ -1,16 +1,50 @@
 <template>
 <div class="images">
 					
+
+
+
 		<template v-if="this.$route.params.id == 'personnel1'" >
 
 				<!--海外交流营-->
-					<router-link to="/home/comcon1/personnel1_1/1" class="personnel1"></router-link>
-					 <a  class="personnel1" href="javascript:void" @click="showvideo('/videoplay/2')"> 
-						<img :src="videoSrc">
-					</a>
-					<router-link to="/home/comcon1/personnel1_3/1" class="personnel1"></router-link>
 
-					<img :src="imagesSrc" >
+
+					<template v-if="worldMap">
+						 <a  class="personnel1" href="javascript:void" @click="showvideo('/videoplay/2')"> </a>
+					</template>
+
+					<template v-else>
+						    <router-link to="/videoplay/2" class="personnel1"> </router-link>
+					</template>
+
+
+
+
+		</template>
+
+
+		<template v-if="this.$route.params.id == 'industry1'" >
+
+				<!--3d协同-->
+
+
+				<a href="javascript:void()" class="flex" @click="dojoinhangzhou()"><img :src="imagesSrc" ></a>
+
+
+		</template>
+
+
+		<template v-else-if="this.$route.params.id == 'center1'" >
+
+
+						  <div class="comconcarousel">
+						    <el-carousel height="100%" :autoplay="false" :loop="false" :interval="3000" arrow="always" class="conmain" @change="change">
+						      <el-carousel-item v-for="(item,index) in imagesSrc" :key="item" class="flex" >
+										<a href="javascript:void()" class="flex" @click="dojoin(index)"><img :src="item" width="100%"></a>
+						      </el-carousel-item>
+						    </el-carousel>
+						  </div>
+
 		</template>
 
 
@@ -50,6 +84,18 @@ export default {
     return {
     	headerid:0,
     	children:false,
+    	center:[
+    		{
+    			"id":"IC1528001261375",
+    			"name":"宁波东部新城创新中心",
+    			"str":'{"name":"宁波创新中心","mark":"70-85-C2-81-D2-9A"}'
+    		},
+    		{
+    			"id":"IC1528001584312",
+    			"name":"苏州创新中心",
+    			"str":'{"name":"苏州创新中心","mark":"70-85-C2-81-D2-9A"}'
+    		}
+    	]
     }
   },
   watch:{
@@ -81,21 +127,31 @@ export default {
 	beforeCreate(){
 			
 				var self =this;
-			switch (self.$route.params.id) {
-				case 'personnel3':
-							//海高人才营需要搜索
-							self.$store.dispatch('fetchSearch',{data:true})
-					break;
-				default:
-							self.$store.dispatch('fetchSearch',{data:false})
-					break;
-			}
 
 						self.$store.dispatch('fetchBack',{data:true})
 						self.$store.dispatch('fetchNav',{data:"comprehensive"})
 						self.$store.dispatch('fetchHeaderimg',{data:config.staticUrl+this.$route.params.id+'header'+1+'.png'})
-		
 						self.$store.dispatch('fetchLogo',{data:false})
+
+
+					switch (self.$route.params.id) {
+						case 'personnel3':
+									//海高人才营需要搜索
+									self.$store.dispatch('fetchSearch',{data:true})
+							break;
+						case 'center1':
+									//部分创新中心		
+									self.$store.dispatch('fetchNav',{data:"center"})
+				
+							break;
+						default:
+									self.$store.dispatch('fetchSearch',{data:false})
+							break;
+					}
+
+
+
+
 
 
 
@@ -111,6 +167,29 @@ export default {
 			var self = this;
 			var videourl = url.split('/')[2]
 			self.worldMap.doPlayVideo('http://202.91.242.168/video/video'+videourl+'.mp4')
+		},
+		dojoin(index){
+			var self = this;
+			try {
+				self.worldMap.doJoin(self.center[index].id,self.center[index].name,self.center[index].str);
+
+			} catch(e) {
+				// statements
+				console.log(e);
+			}
+			
+
+		},
+		dojoinhangzhou(){
+
+			var self = this;
+			try {
+				self.worldMap.doJoin('IC1521620094998','杭州创新中心','{"name":"杭州创新中心","mark":"70-85-C2-81-D2-9A"}');
+
+			} catch(e) {
+				// statements
+				console.log(e);
+			}
 		}
 	}
 }
@@ -120,7 +199,7 @@ export default {
 
 <style lang="stylus">
 .images {
-	    position: absolute;
+	position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
@@ -132,7 +211,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-	
 }
 .images img { width: 100%; display: block;}
 	
@@ -183,9 +261,13 @@ bottom:0  !important;
 	.comconcarousel	.el-carousel__arrow--right  i { display:none;}
 	.comconcarousel .goback { width:1rem; height:1rem; position:absolute; left:0; top:0; z-index:100}
 
-.personnel1 { position:absolute; width:28%; height:100%; display:block;}
-.personnel1:nth-child(1) { left:12%;}
-.personnel1:nth-child(2) { left:40%;}
-.personnel1:nth-child(3) { left:70%;}
+.personnel1 {     position: absolute;
+    width: 20%;
+    height: 50%;
+    left: 30%;
+    top: 10%;
+    display: block;}
+
+
 </style>
 

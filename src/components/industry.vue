@@ -2,12 +2,10 @@
 	
 	<div class="industry comprehensive-main">
 		
-		<el-carousel :autoplay="false" arrow="always" class="btn-one">
+		<el-carousel :autoplay="false" :initial-index="$route.query.page"  :loop="false"  arrow="always" class="btn-one" @change="change">
 			
 			
-			<el-carousel-item >
-					
-					
+			<el-carousel-item class="is-animating">
 					<div class="flex flex-top">
 						<router-link :to="list[0].url" v-html="list[0].title" v-bind:style="{ 'background': list[0].bgColor }" class="flex flex-item"></router-link>
 						<router-link :to="list[1].url" v-html="list[1].title" v-bind:style="{ 'background': list[1].bgColor }" class="flex flex-item"></router-link>
@@ -26,30 +24,11 @@
 
 
 					</div>
-					<!--
-					<el-row >
-							<el-col  :span="8"  class="three-link">								
-										<router-link :to="list[0].url" v-html="list[0].title" v-bind:style="{ 'background': list[0].bgColor }" class="flex"></router-link>
-										<router-link :to="list[1].url" v-html="list[1].title" v-bind:style="{ 'background': list[1].bgColor }" class="flex"></router-link>
-										<router-link :to="list[2].url" v-html="list[2].title" v-bind:style="{ 'background': list[2].bgColor }" class="flex"></router-link>								
-							</el-col>
-							<el-col  :span="8"  class="three-link">								
-										<router-link :to="list[3].url" v-html="list[3].title" v-bind:style="{ 'background': list[3].bgColor }" class="flex"></router-link>
-										<router-link :to="list[4].url" v-html="list[4].title" v-bind:style="{ 'background': list[4].bgColor }" class="flex"></router-link>
-										<router-link :to="list[5].url" v-html="list[5].title" v-bind:style="{ 'background': list[5].bgColor }" class="flex"></router-link>								
-							</el-col>
-							<el-col  :span="8"  class="three-link">								
-										<router-link :to="list[6].url" v-html="list[6].title" v-bind:style="{ 'background': list[6].bgColor }" class="flex"></router-link>
-										<router-link :to="list[7].url" v-html="list[7].title" v-bind:style="{ 'background': list[7].bgColor }" class="flex"></router-link>						
-							</el-col>
-					
-					</el-row>
-					-->
 				
 			</el-carousel-item>
 			
 			
-			<el-carousel-item >
+			<el-carousel-item class="is-animating">
 					
 					
 					<el-row >
@@ -91,6 +70,11 @@ export default {
 	mounted() {
 	},
 	methods:{
+		change(e){
+			var self = this;
+			this.$router.push({path: '/home/comprehensive/industry', query: {page: e}})
+			
+		}
 	}
 }
 </script>

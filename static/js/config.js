@@ -49,12 +49,12 @@ var config = {
 			{
 				"img":"/static/images/center2.png",
 				"title":"创新中心简介",
-				"url":"/centercon/center2/11",
+				"url":"/centercon/center2/12",
 			},
 			{
 				"img":"/static/images/center3.png",
 				"title":"部分创新中心",
-				"url":"/home/images/1"
+				"url":"/home/comcon/center1/2"
 			}
 		],
 		//综合服务
@@ -76,7 +76,7 @@ var config = {
 						{
 							"title":"双优工程",
 							"bgColor":"#364fa8",
-							"url":"/home/comcon/innovation2/4"
+							"url":"/home/comcon/innovation2/3"
 						},
 						{
 							"title":"全球细分领域</br>产业化论坛",
@@ -86,7 +86,7 @@ var config = {
 						{
 							"title":"全球技术</br>转移平台",
 							"bgColor":"#409957",
-							"url":"/home/comcon/innovation4/1"
+							"url":"/home/comcon/innovation4/3"
 						},
 						{
 							"title":"全球创新</br>项目路演",
@@ -108,14 +108,14 @@ var config = {
 				"children":[
 				
 						{
-							"title":"3D设计</br>服务",
+							"title":" 3D协同</br>设计服务",
 							"bgColor":"#1162a2",
-							"url":"/home/comcon/industry1/2"
+							"url":"/home/comcon/industry1/1"
 						},
 						{
 							"title":"3D云打印</br>服务",
 							"bgColor":"#364ea8",
-							"url":"/home/comcon/industry2/1"
+							"url":"/home/comcon/industry2/2"
 						},
 						{
 							"title":"Human</br>2.0",
@@ -125,12 +125,12 @@ var config = {
 						{
 							"title":"智慧仓储</br>物流服务",
 							"bgColor":"#06857e",
-							"url":"/home/comcon/industry4/1"					
+							"url":"/home/comcon/industry4/2"					
 						},
 						{
 							"title":"精准数字</br>营销服务",
 							"bgColor":"#419756",
-							 "url":"/home/images/1"
+							"url":"/home/comcon/industry5/2"	
 						},
 						{
 							"title":"产品全生命周期管理服务",
@@ -155,12 +155,12 @@ var config = {
 						{
 							"title":"阿里云+</br>工业大脑+</br>物联网",
 							"bgColor":"#3a50ae",
-							 "url":"/home/images/1"
+							 "url":"/home/comprehensive/industry?page=1"
 						}	,
 						{
-							"title":"5G基础网络+</br>Edge Computing",
+							"title":"5G基础网络+</br>边缘计算",
 							"bgColor":"#4d62b0",
-							"url":"/home/comcon/industry12/1"
+							"url":"/home/comcon/industry12/2"
 						}	
 					]
 				},
@@ -178,7 +178,7 @@ var config = {
 						{
 							"title":"工匠学院",
 							"img":"/static/images/personnel2.png",
-							 "url":"/home/images/1"
+							"url":"/videoplay/3"
 						},
 						{
 							"title":"海高人才引进",

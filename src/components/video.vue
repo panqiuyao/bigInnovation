@@ -2,16 +2,14 @@
 <div class="video flex">
 
 					<template v-if="worldMap">
-						    <a href="javascript:void" @click="showvideo('/videoplay/1')"> 
+						    <a href="javascript:void"> 
 									<img :src="videoSrc">
 							</a>
 					</template>
-
 					<template v-else>
-
-								<router-link to="/videoplay/1">
-									<img :src="videoSrc">
-								</router-link>
+							<router-link to="">
+								<img :src="videoSrc">
+							</router-link>
 					</template>
 
 
