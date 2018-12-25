@@ -2,13 +2,13 @@
 <div class="video flex">
 
 					<template v-if="worldMap">
-						    <a href="javascript:void"> 
-									<img :src="videoSrc">
+						    <a href="javascript:"> 
+								<img :src="listData.img"/>
 							</a>
 					</template>
 					<template v-else>
-							<router-link to="">
-								<img :src="videoSrc">
+							<router-link :to="listData.url">
+								<img :src="listData.img"/>
 							</router-link>
 					</template>
 
@@ -28,14 +28,20 @@ export default {
 		videoSrc(){
 			return   config.staticUrl+'video'+this.$route.params.id+'.png'
 		},
+		listData(){
+			var self = this;
+			return   configRouter.video[self.$route.params.id]
+			
+		},
 		worldMap:() => worldMap
 	},
-	beforeCreate(){
-			
-			this.$store.dispatch('fetchBack',{data:true})
-			this.$store.dispatch('fetchHeaderimg',{data:config.staticUrl+'video'+this.$route.params.id+'header'+1+'.png'})
-			this.$store.dispatch('fetchSearch',{data:true})
-			this.$store.dispatch('fetchLogo',{data:false})
+	created(){
+		var self =this;
+		self.$store.dispatch('fetchBack',{data:configRouter.video[this.$route.params.id].back})
+		self.$store.dispatch('fetchNav',{data:configRouter.video[this.$route.params.id].rightNav})
+		self.$store.dispatch('fetchHeaderimg',{data:configRouter.video[this.$route.params.id].headerImg})
+		self.$store.dispatch('fetchLogo',{data:configRouter.video[this.$route.params.id].logo})
+		self.$store.dispatch('fetchSearch',{data:configRouter.video[this.$route.params.id].search})
 
 	},
 	mounted() {
@@ -54,7 +60,7 @@ export default {
 
 <style lang="stylus">
 .video {
-	    position: absolute;
+    position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
@@ -62,14 +68,13 @@ export default {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 2% 3%;
-    margin-top: 0.6rem;
-        display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 	
 }
 .video img { width: 100%; display: block;}
-	.video a { height:auto;}
+.video a { height:auto;}
 	
 	
 

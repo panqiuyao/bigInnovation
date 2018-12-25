@@ -70,6 +70,7 @@ export default {
 			this.$store.dispatch('fetchBack',{data:false})
 	},
 	mounted() {
+		
 	},
 	methods:{
 		prevpage(){
@@ -98,7 +99,7 @@ export default {
 	.header .nav  a.comprehensive 	{ background: url(nav3); }
 	.header .nav  a.comprehensive:hover  	{ background: url(nav3H); }
 	.header .nav  a.comprehensive.active  	{ background: url(nav3A); }
-	.home-main { position: absolute; bottom: 0; top:0; left:0; right:0; box-sizing: border-box; padding: 2% 3%; margin-top:.6rem;}
+	.home-main { position: absolute; bottom: 0; top:0; left:0; right:0; box-sizing: border-box; padding: 2% 3%; margin-top:1rem;}
 	.item-list img { width: 100%; display: block;}
 	.item-title { width: 100%; height: .95rem; background: fcBg; color: fontColor; font-size: fontSize; border-bottom-left-radius: .1rem; border-bottom-right-radius: .1rem;}
 	a:hover .item-title { background:fcBgH ; color: fcfff;}
@@ -125,5 +126,11 @@ export default {
 		-webkit-transform: translate(-100%, 0);
 		transform: translate(-100%, 0);
 	}
+	
+	.btn-one  .el-carousel__arrow { width: 0.575rem; height: 0.575rem; background-color:rgba(0,0,0,.1)}
+	.btn-one  .el-carousel__arrow:hover { background: fcBgH;}
+	.btn-one  .el-carousel__arrow i { font-size: 0.3rem;}
+	.btn-one  .el-carousel__arrow.el-carousel__arrow--left  { left: -0.75rem;}
+	.btn-one  .el-carousel__arrow.el-carousel__arrow--right  { right: -0.55rem;}
 </style>
 

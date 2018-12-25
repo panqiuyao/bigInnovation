@@ -6,7 +6,7 @@
 		</template>
 		<template  v-else>
 
-				<span v-on:click="prevpage()" class="goback"></span>
+				<span v-on:click="prevpage()" class="goback" v-if="back"></span>
 
 
 
@@ -29,6 +29,7 @@ export default {
   name: 'centercon',
   data () {
     return {
+    	back:false,
     }
   },
 	computed:{
@@ -61,6 +62,14 @@ export default {
 	methods:{
 		prevpage(){
 			this.$router.go(-1)
+		},
+		change(e){
+			var self = this;
+			if(e == 11){
+				self.back = true;
+			}else{
+				self.back = false;
+			}
 		}
 	}
 }
@@ -102,7 +111,10 @@ export default {
 }
 	.centercon	.el-carousel__arrow--left  i,
 	.centercon	.el-carousel__arrow--right  i { display:none;}
-	.centercon .goback { width:1rem; height:1rem; position:absolute; left:0; top:0; z-index:100}
+	.centercon .goback { width:1rem; height:1rem; position:absolute; left:0; top:0; z-index:100;
+		background:url('/static/images/goback.png') center center no-repeat ; 
+    background-size: 50% 50%;
+	}
 
 
     .centercon .el-carousel__item { opacity:0; transform: translateX(0) scale(1) !important;

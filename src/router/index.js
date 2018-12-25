@@ -15,7 +15,6 @@ import video from '@/components/video'
 import videoplay from '@/components/videoplay'
 
 import comcon from '@/components/comcon'
-import personnel3 from '@/components/personnel3'
 
 
 
@@ -35,10 +34,10 @@ export default new Router({
 
 		{
 
-			//人才链
+			//PPT
 			path: '/centercon/:id/:num',
 			name: 'centercon',
-			meta:{index:120000},
+			meta:{index:130002},
 			component: centercon,
 		},
 		{
@@ -98,15 +97,6 @@ export default new Router({
 										component: capital,
 									}
 								]
-							},
-
-							{
-
-								//人才链
-								path: 'personnel3',
-								name: 'personnel3',
-								meta:{index:120001},
-								component: personnel3,
 							},
 							{
 								//图片

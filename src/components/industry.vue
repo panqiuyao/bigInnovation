@@ -93,7 +93,8 @@ export default {
 	.industry .el-carousel__indicators { display: none;}
 	.industry .el-row  {  margin-left:-0.125rem;  margin-right:-0.125rem;}
 	.industry .el-row .el-col { padding-left:.125rem }
-	.industry .flex-top a { height: 1.728rem; box-sizing: border-box;     overflow: hidden;  margin:0 0.0625rem;}
+	.industry .flex-top { margin-top:.25rem;}
+	.industry .flex-top a { height: 1.5rem; box-sizing: border-box;     overflow: hidden;  margin:0 0.0625rem;}
 	.industry .flex-bottom  { margin-top:0.125rem;}
 	.industry .flex-bottom a { height: 1.728rem; box-sizing: border-box;     overflow: hidden; margin:0 0.0625rem;}
 

@@ -51,6 +51,8 @@ export default {
 		}
 	},
 	mounted() {
+				document.querySelector('.header').classList.remove('mh')
+				document.querySelector('.bodybg').classList.remove('mh')
 	},
   watch:{
     '$route' (to, from) {
@@ -88,7 +90,7 @@ export default {
 	}
 	.comp-title { color: fontColor1; 
     font-size: 0.3rem;
-    top: 0.4rem;
+    top: 0rem;
     position: absolute; font-weight: 600;
 		opacity: 1;
 		transition: all .5s;
@@ -108,11 +110,6 @@ export default {
 	.left-nav   a.active {background:fcBgA;   }
 	.nav-right { height: 3.625rem; position: relative; top:-0.125rem;     }
 	.nav-right .el-carousel {     padding: 0 0.55rem 0 1.0rem;box-sizing: border-box;}
-	.btn-one  .el-carousel__arrow { width: 0.575rem; height: 0.575rem; background-color:rgba(0,0,0,.1)}
-	.btn-one  .el-carousel__arrow:hover { background: fcBgH;}
-	.btn-one  .el-carousel__arrow i { font-size: 0.3rem;}
-	.btn-one  .el-carousel__arrow.el-carousel__arrow--left  { left: -0.75rem;}
-	.btn-one  .el-carousel__arrow.el-carousel__arrow--right  { right: -0.55rem;}
 	.left-nav { width: 13.5%;}
 	.right-nav { width: 86.5%;}
 	
