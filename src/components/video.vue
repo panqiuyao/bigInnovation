@@ -1,16 +1,48 @@
 <template>
 <div class="video flex">
-
-					<template v-if="worldMap">
+				
+					<!--<template v-if="worldMap">
 						    <a href="javascript:"> 
 								<img :src="listData.img"/>
 							</a>
 					</template>
-					<template v-else>
-							<router-link :to="listData.url">
+				-->
+							<div class="videoimgmian">
+						
+								<template v-for="item,index in listData.url">
+									<template v-if="item">
+										<template v-if="item.indexOf('videoplay') >= 0">
+											
+												<template v-if="worldMap">
+													    <a href="javascript:" @click="showvideo(item)" :class="'videolink'+index"> 
+														</a>
+												</template>
+												<template v-else>
+														<router-link :to="item"   :class="'videolink'+index"></router-link>
+												</template>
+										</template>
+										<template v-else-if="item.indexOf('http') >= 0">
+											
+												<template v-if="worldMap">
+													    <a href="javascript:" :class="'videolink'+index"  @click="worldMap.doShell(item)" > 
+														</a>
+												</template>
+												<template v-else>
+													<a :href="item"  :class="'videolink'+index" target="_blank"></a>
+												</template>
+
+										</template>
+										<template v-else>
+											
+											<router-link :to="item"  :class="'videolink'+index"></router-link>
+
+										</template>
+									</template>
+
+								</template>
 								<img :src="listData.img"/>
-							</router-link>
-					</template>
+								
+							</div>
 
 
 
@@ -50,7 +82,7 @@ export default {
 		showvideo(url){
 			var self = this;
 			var videourl = url.split('/')[2]
-			self.worldMap.doPlayVideo('http://202.91.242.168/video/video'+videourl+'.mp4')
+			self.worldMap.doPlayVideo('video'+videourl+'.mp4')
 		}
 	}
 }
@@ -58,7 +90,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style lang="stylus">
+<style lang="stylus" type="">
 .video {
     position: absolute;
     bottom: 0;
@@ -75,6 +107,14 @@ export default {
 }
 .video img { width: 100%; display: block;}
 .video a { height:auto;}
+.videoimgmian {  position: relative; }
+.videoimgmian a { position: absolute; }
+.videoimgmian a.videolink0 { width: 37%; height: 100%;  left:24.5%;}
+.videoimgmian a.videolink1 { width: 18.5%; height: 48%; left:62.5%;}
+.videoimgmian a.videolink2 { width: 18.5%; height: 48%; left:81.5%;}
+.videoimgmian a.videolink3 { width: 18.5%; height: 48%; left:62.5%; top:52%;}
+.videoimgmian a.videolink4 { width: 18.5%; height: 48%; left:81.5%; top:52%;}
+
 	
 	
 

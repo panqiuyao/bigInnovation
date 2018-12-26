@@ -6,7 +6,7 @@
 		</template>
 		<template  v-else>
 
-				<span v-on:click="prevpage()" class="goback" v-if="back"></span>
+				<span v-on:click="prevpage()" class="goback" :class="{show:back}" ></span>
 
 
 
@@ -112,10 +112,13 @@ export default {
 	.centercon	.el-carousel__arrow--left  i,
 	.centercon	.el-carousel__arrow--right  i { display:none;}
 	.centercon .goback { width:1rem; height:1rem; position:absolute; left:0; top:0; z-index:100;
+
+	}
+.centercon .goback.show {
 		background:url('/static/images/goback.png') center center no-repeat ; 
     background-size: 50% 50%;
-	}
-
+	
+}
 
     .centercon .el-carousel__item { opacity:0; transform: translateX(0) scale(1) !important;
 

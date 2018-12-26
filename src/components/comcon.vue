@@ -9,11 +9,20 @@
 					<el-row class="flex innovation6" >
 
 						  <el-col :span="3" v-for="item,index in listData" :key="index">
-						  	
+						  			
+
+								<template v-if="worldMap && item.url.indexOf('videoplay') >= 0">
+									 <a href="javascript:" @click="showvideo(item.url)"> 
+										<img :src="item.images">
+										<div class="item-title flex cententtitle">{{item.title}}</div>
+									 </a>
+								</template>
+								<template v-else>
 							    <router-link :to="item.url"> 
 										<img :src="item.images">
 										<div class="item-title flex cententtitle">{{item.title}}</div>
 								</router-link>
+								</template>
 
 						  </el-col>
 						
@@ -76,11 +85,13 @@
 
 							<div class="popup-tck" :class="{show:popupTck,anm:popupTckAnm}" :style="popupStyle">
 								<div class="flex">
+									<div class="close"  @click="closeexpert"></div>
 									<div class="img"><img :src="expert.img"></div>
 									<div class="cont flex-item">
-										<div class="close"  @click="closeexpert"></div>
-										<div class="t" v-html="expert.name"></div>
-										<div class="d" v-html="expert.descCon"></div>
+										<div class="t">
+											{{expert.name}}
+											<span class="d">{{expert.descCon}}</span>
+										</div>
 										<div class="c" v-html="expert.content"></div>
 									</div>
 								</div>
@@ -158,10 +169,7 @@
 						  <div class="comconcarousel">
 						    <el-carousel height="100%" :autoplay="false" :loop="false" :interval="3000" arrow="always" class="conmain" @change="change">
 						      <el-carousel-item v-for="item,index in listData" :key="index" class="flex" >
-
-
 								<template  v-if="item.url.indexOf('http') >= 0">
-
 									<template v-if="worldMap">
 							    		<router-link to="javascript:" @click="worldMap.doShell(item.url)" class="flex"> 
 											<img :src="item.img" width="100%">
@@ -262,7 +270,7 @@ export default {
 		showvideo(url){
 			var self = this;
 			var videourl = url.split('/')[2]
-			self.worldMap.doPlayVideo('http://202.91.242.168/video/video'+videourl+'.mp4')
+			self.worldMap.doPlayVideo('video'+videourl+'.mp4')
 		},
 		dojoin(id,name,str){
 			var self = this;
@@ -417,17 +425,17 @@ bottom:0  !important;
 .popup-tck .flex { width:100%; height:100%; }
 .popup-tck  .img  { height:100%;}
 .popup-tck  .img img { height:100%; width:auto;}
-.popup-tck .cont { font-size:.25rem;     height: 80%; position:relative;}
-.popup-tck .cont .t { font-size:.35rem; font-weight:600;}
-.popup-tck .cont .d  { font-size:.25rem; padding:.15rem 0}
-.popup-tck .cont .c  { font-size:.2rem; line-height: .3rem}
+.popup-tck .cont { font-size:.25rem;     position:relative;}
+.popup-tck .cont .t { font-size:.35rem; font-weight:600; position: relative; left: -.1rem;}
+.popup-tck .cont .d  { font-size:.25rem; }
+.popup-tck .cont .c  { font-size:.2rem; line-height: .3rem; text-align:justify;  padding-top:.15rem}
 .popup-tck .close   {     position: absolute;
     background: url(/static/images/close.png) center center no-repeat;
     width: 0.4rem;
     height: 0.4rem;
     background-size: 70% 60%;
     right: 0.1rem;
-    top: -0.3rem;}
+    top: 0.1rem;}
     .personnel3  .popup-tck .flex-item { padding: 0 .5rem; }
 </style>
 

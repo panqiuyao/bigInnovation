@@ -2,6 +2,28 @@ var config = {
 	  "domain":"",
 	  "staticUrl":"/static/images/",
 	 "mapsUrl":"http://www.mobex.cn/inc/maps.html",
+	 "videoPath":{
+	 	"1":{
+	 		"big":"cyber3840.mp4",
+	 		"small":"cyber1920.mp4",
+	 	},
+	 	"2":{
+	 		"big":"video2.mp4",
+	 		"small":"video2.mp4",
+	 	},
+	 	"3":{
+	 		"big":"video3.mp4",
+	 		"small":"video3.mp4",
+	 	},
+	 	"4":{
+	 		"big":"video4.mp4",
+	 		"small":"video4.mp4",
+	 	},
+	 	"5":{
+	 		"big":"video5.mp4",
+	 		"small":"video5.mp4",
+	 	}
+	 },
 		//右上角
 		"header":{
 			"left":{
@@ -54,7 +76,7 @@ var config = {
 			{
 				"img":"/static/images/center3.png",
 				"title":"部分创新中心",
-				"url":"/home/comcon/center1/2"
+				"url":"/home/comcon/center1"
 			}
 		],
 		//综合服务
@@ -76,7 +98,7 @@ var config = {
 						{
 							"title":"双优工程",
 							"bgColor":"#364fa8",
-							"url":"/home/comcon/innovation2/3"
+							"url":"/home/comcon/innovation2"
 						},
 						{
 							"title":"全球细分领域</br>产业化论坛",
@@ -86,7 +108,7 @@ var config = {
 						{
 							"title":"全球技术</br>转移平台",
 							"bgColor":"#409957",
-							"url":"/home/comcon/innovation4/3"
+							"url":"/home/comcon/innovation4"
 						},
 						{
 							"title":"全球创新</br>项目路演",
@@ -96,7 +118,7 @@ var config = {
 						{
 							"title":"全球创新</br>技术展示",
 							"bgColor":"#72a751",
-							"url":"/home/comcon/innovation6/1"
+							"url":"/home/comcon/innovation6"
 						}
 					]
 				},
@@ -110,47 +132,47 @@ var config = {
 						{
 							"title":" 3D协同</br>设计服务",
 							"bgColor":"#1162a2",
-							"url":"/home/comcon/industry1/1"
+							"url":"/home/comcon/industry1"
 						},
 						{
 							"title":"3D云打印</br>服务",
 							"bgColor":"#364ea8",
-							"url":"/home/comcon/industry2/2"
+							"url":"/home/comcon/industry2"
 						},
 						{
 							"title":"Human</br>2.0",
 							"bgColor":"#1164a5",
-							"url":"/home/comcon/industry3/1"
+							"url":"/home/comcon/industry3"
 						},
 						{
 							"title":"智慧仓储</br>物流服务",
 							"bgColor":"#06857e",
-							"url":"/home/comcon/industry4/2"					
+							"url":"/home/comcon/industry4"					
 						},
 						{
 							"title":"精准数字</br>营销服务",
 							"bgColor":"#419756",
-							"url":"/home/comcon/industry5/2"	
+							"url":"/home/comcon/industry5"	
 						},
 						{
 							"title":"产品全生命周期管理服务",
 							"bgColor":"#1266a6",
-							"url":"/home/comcon/industry7/1"
+							"url":"/home/comcon/industry7"
 						},
 						{
 							"title":"自动化</br>流水线服务",
 							"bgColor":"#3752ad",
-							"url":"/home/comcon/industry8/3"
+							"url":"/home/comcon/industry8"
 						},
 						{
 							"title":"供应链智慧管理服务",
 							"bgColor":"#3f59a3",
-							"url":"/home/comcon/industry9/1"
+							"url":"/home/comcon/industry9"
 						},
 						{
 							"title":"数字孪生",
 							"bgColor":"#1168aa",
-							"url":"/home/comcon/industry10/1"
+							"url":"/home/comcon/industry10"
 						}	,
 						{
 							"title":"阿里云+</br>工业大脑+</br>物联网",
@@ -160,7 +182,7 @@ var config = {
 						{
 							"title":"5G基础网络+</br>边缘计算",
 							"bgColor":"#4d62b0",
-							"url":"/home/comcon/industry12/2"
+							"url":"/home/comcon/industry12"
 						}	
 					]
 				},
@@ -173,7 +195,7 @@ var config = {
 						{
 							"title":"海外交流营",
 							"img":"/static/images/personnel1.png",
-							"url":"/home/comcon/personnel1/1"
+							"url":"/home/comcon/personnel1"
 						},
 						{
 							"title":"工匠学院",
@@ -183,7 +205,7 @@ var config = {
 						{
 							"title":"海高人才引进",
 							"img":"/static/images/personnel3.png",
-							"url":"/home/comcon/personnel3/1"
+							"url":"/home/comcon/personnel3"
 						},
 						{
 							"title":"企业内训平台",
@@ -207,27 +229,27 @@ var config = {
 					{
 						"title":"产业基金",
 						"img":"/static/images/capital1.png",
-						"url":"/home/comcon/capital1/1"
+						"url":"/home/comcon/capital1"
 					},
 					{
 						"title":"共创式投资",
 						"img":"/static/images/capital2.png",
-						"url":"/home/comcon/capital2/1"
+						"url":"/home/comcon/capital2"
 					},
 					{
 						"title":"国际并购",
 						"img":"/static/images/capital3.png",
-						"url":"/home/comcon/capital3/1"
+						"url":"/home/comcon/capital3"
 					},
 					{
 						"title":"小微金融",
 						"img":"/static/images/capital4.png",
-						"url":"/home/comcon/capital4/2"
+						"url":"/home/comcon/capital4"
 					},
 					{
 						"title":"科技金融",
 						"img":"/static/images/capital5.png",
-						"url":"/home/comcon/capital5/1"
+						"url":"/home/comcon/capital5"
 					}
 				  ]	
 				}
@@ -727,7 +749,40 @@ var configRouter = {
     			"str":'{"name":"苏州创新中心","mark":"70-85-C2-81-D2-9A"}'
     		}
 	],
-
+	//2018中国台州全球高层次创业大赛
+	"video0101":[
+			{
+				"back":true,
+				"logo":false,
+				"search":false,
+				"rightNav":"comprehensive",
+				"headerImg":"/static/images/video0101header1.png",
+				"img":"/static/images/video0101img1.png",
+				"url":""
+			}
+	],
+	"video0301":[
+			{
+				"back":true,
+				"logo":false,
+				"search":false,
+				"rightNav":"comprehensive",
+				"headerImg":"/static/images/video0301header1.png",
+				"img":"/static/images/video0301img1.png",
+				"url":""
+			}
+	],
+	"video0304":[
+			{
+				"back":true,
+				"logo":false,
+				"search":false,
+				"rightNav":"comprehensive",
+				"headerImg":"/static/images/video0304header1.png",
+				"img":"/static/images/video0304img1.png",
+				"url":""
+			}
+	],
 	"video":{
 		1:{
 			"back":true,
@@ -736,7 +791,13 @@ var configRouter = {
 			"rightNav":"comprehensive",
 			"headerImg":"/static/images/video1header1.png",
 			"img":"/static/images/video1.png",
-			"url":""
+			"url":[
+				'/home/comcon/video0101',
+				'',
+				'',
+				'',
+				''
+			]
 		},
 		3:{
 			"back":true,
@@ -745,7 +806,13 @@ var configRouter = {
 			"rightNav":"comprehensive",
 			"headerImg":"/static/images/video3header1.png",
 			"img":"/static/images/video3.png",
-			"url":""
+			"url":[
+				'/home/comcon/video0301',
+				'',
+				'',
+				'/home/comcon/video0304',
+				''
+			]
 		},
 		5:{
 			"back":true,
@@ -754,7 +821,13 @@ var configRouter = {
 			"rightNav":"comprehensive",
 			"headerImg":"/static/images/video5header1.png",
 			"img":"/static/images/video5.png",
-			"url":"/videoplay/5"
+			"url":[
+				'',
+				'',
+				'/videoplay/5',
+				'',
+				''
+			]
 		},
 		14:{
 			"back":true,
@@ -763,7 +836,13 @@ var configRouter = {
 			"rightNav":"comprehensive",
 			"headerImg":"/static/images/video14header1.png",
 			"img":"/static/images/video14.png",
-			"url":""
+			"url":[
+				'http://www.geju.com/course_list.html?type=7',
+				'',
+				'',
+				'',
+				''
+			]
 		},
 		15:{
 			"back":true,
@@ -772,7 +851,13 @@ var configRouter = {
 			"rightNav":"comprehensive",
 			"headerImg":"/static/images/video15header1.png",
 			"img":"/static/images/video15.png",
-			"url":""
+			"url":[
+				'http://www.geju.com/course_list.html?type=1',
+				'',
+				'',
+				'',
+				''
+			]
 		}
 
 	}

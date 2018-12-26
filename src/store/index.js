@@ -11,6 +11,7 @@ const state  = {
 	nav:"center",
 	leftnav:"innovation",
 	rightnav:true,
+	screen:"big",
 }
 const getters = {
 		//顶部返回
@@ -40,6 +41,10 @@ const getters = {
 		//左边nav
 		getRightnav(state) {
 			return state.rightnav
+		},
+		//左边nav
+		getScreen(state) {
+			return state.screen
 		}
 }
 const mutations  = {
@@ -68,9 +73,13 @@ const mutations  = {
 	     state.leftnav = data
 	 },
 	//左边nav
-	setRightnav(state) {
+	setRightnav(state,data) {
 
 	     state.rightnav = data
+	},
+	//左边nav
+	setScreen(state,data) {
+	     state.screen = data
 	}
 
 }
@@ -102,6 +111,11 @@ const actions = {
 	//左边nav
 	fetchRightnav(self,data){
 			self.commit('setRightnav',data.data)
+	} ,
+	//左边nav
+	fetchScreen(self,data){
+
+			self.commit('setScreen',data.data)
 	} 
 }
 

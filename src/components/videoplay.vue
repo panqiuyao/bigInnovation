@@ -19,7 +19,11 @@ export default {
   },
 	computed:{
 		videoSrc(){
-			return  'http://202.91.242.168/video/video'+this.$route.params.id+'.mp4'
+
+
+				console.log(config.videoPath[this.$route.params.id][this.$store.getters.getScreen])
+			return  'http://202.91.242.168/video/'+config.videoPath[this.$route.params.id][this.$store.getters.getScreen]
+
 		}
 	},
 	beforeCreate(){
@@ -28,6 +32,13 @@ export default {
 			this.$store.dispatch('fetchBack',{data:true})
 			this.$store.dispatch('fetchSearch',{data:false})
 			this.$store.dispatch('fetchLogo',{data:false})
+					
+		if(screen.availWidth >= 3000 ){
+			this.$store.dispatch('fetchScreen',{data:"big"})
+		}else{
+			this.$store.dispatch('fetchScreen',{data:"small"})
+
+		}	
 
 	},
 	mounted() {

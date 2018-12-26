@@ -10,7 +10,6 @@ import innovation from '@/components/innovation'
 import industry from '@/components/industry'
 import personnel from '@/components/personnel'
 import capital from '@/components/capital'
-import images from '@/components/images'
 import video from '@/components/video'
 import videoplay from '@/components/videoplay'
 
@@ -99,24 +98,17 @@ export default new Router({
 								]
 							},
 							{
-								//图片
-								path: 'images/:id',
-								name: 'images',
-								meta:{index:120000},
-								component: images
-							},
-							{
 								//图片轮播
-								path: 'comcon/:id/:num',
+								path: 'comcon/:id',
 								name: 'comcon',
-								meta:{index:120000},
+								meta:{index:130000},
 								component: comcon
 							},
 							{
 								//视频
 								path: 'video/:id',
 								name: 'video',
-								meta:{index:130000},
+								meta:{index:120000},
 								component: video
 							},
 

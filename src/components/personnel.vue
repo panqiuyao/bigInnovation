@@ -91,7 +91,7 @@ export default {
 		showvideo(url){
 			var self = this;
 			var videourl = url.split('/')[2]
-			self.worldMap.doPlayVideo('http://202.91.242.168/video/video'+videourl+'.mp4')
+			self.worldMap.doPlayVideo('video'+videourl+'.mp4')
 		}
 	}
 }

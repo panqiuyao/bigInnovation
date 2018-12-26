@@ -68,9 +68,19 @@ export default {
 	},
 	beforeCreate(){
 			this.$store.dispatch('fetchBack',{data:false})
+
+		
+		if(screen.availWidth >= 3000 ){
+			this.$store.dispatch('fetchScreen',{data:"big"})
+		}else{
+			this.$store.dispatch('fetchScreen',{data:"small"})
+
+		}	
+	
+	},
+	created(){
 	},
 	mounted() {
-		
 	},
 	methods:{
 		prevpage(){

@@ -2,16 +2,14 @@
 		
   <el-row  :gutter="0">
 			<el-col  :span="8"  class="item-list" v-for="(item,index) in list" :key="item.url">
-					
 					<template v-if="worldMap && item.url.indexOf('videoplay') > 0">
-						    <a href="javascript:void" @click="showvideo(item.url)"> 
+						    <a href="javascript:" @click="showvideo(item.url)"> 
 									<img :src="item.img">
 									<div class="item-title flex cententtitle">{{item.title}}</div>
 							</a>
 					</template>
 
 					<template v-else>
-
 						    <router-link :to="item.url"> 
 									<img :src="item.img">
 									<div class="item-title flex cententtitle">{{item.title}}</div>
@@ -41,6 +39,7 @@ export default {
 			this.$store.dispatch('fetchLogo',{data:true})
 	},
 	mounted(){
+
 	},
 	computed:{
 		worldMap:() => worldMap
@@ -55,7 +54,7 @@ export default {
 		showvideo(url){
 			var self = this;
 			var videourl = url.split('/')[2]
-			self.worldMap.doPlayVideo('http://202.91.242.168/video/video'+videourl+'.mp4')
+			self.worldMap.doPlayVideo(config.videoPath[videourl][this.$store.getters.getScreen])
 		}
 	}
 }
