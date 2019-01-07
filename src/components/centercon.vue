@@ -111,12 +111,12 @@ export default {
 }
 	.centercon	.el-carousel__arrow--left  i,
 	.centercon	.el-carousel__arrow--right  i { display:none;}
-	.centercon .goback { width:1rem; height:1rem; position:absolute; left:0; top:0; z-index:100;
+	.centercon .goback { width:4%; height:10%; position:absolute; left:0; top:7%; z-index:100;
 
 	}
 .centercon .goback.show {
 		background:url('/static/images/goback.png') center center no-repeat ; 
-    background-size: 50% 50%;
+    background-size: 70%;
 	
 }
 

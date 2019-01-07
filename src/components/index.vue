@@ -26,7 +26,7 @@ export default {
   },
 	watch:{
 		thisIndex(){
-			 if(this.thisIndex == 7){
+			 if(this.thisIndex == 2){
 			  window.location.href =  config.mapsUrl
 			 }
 		}
@@ -41,7 +41,9 @@ export default {
 			       loop: true, // 循环模式选项
 			       on: {
 						slideChangeTransitionStart: function(){
+							if(this.activeIndex == 4){
 						      self.thisIndex++;
+							}
 					  	}
 					 }
 				})

@@ -20,8 +20,6 @@ export default {
 	computed:{
 		videoSrc(){
 
-
-				console.log(config.videoPath[this.$route.params.id][this.$store.getters.getScreen])
 			return  'http://202.91.242.168/video/'+config.videoPath[this.$route.params.id][this.$store.getters.getScreen]
 
 		}

@@ -78,7 +78,9 @@ export default {
 		this.$store.dispatch('fetchLeftnav',{data:"personnel"})
 	},
 	computed:{
-		worldMap:() => worldMap
+		worldMap(){
+			return  this.$store.getters.getWorldMap;
+		}
 	},
 	mounted() {
 	},
@@ -91,7 +93,7 @@ export default {
 		showvideo(url){
 			var self = this;
 			var videourl = url.split('/')[2]
-			self.worldMap.doPlayVideo('video'+videourl+'.mp4')
+			self.worldMap.doPlayVideo(config.videoPath[videourl][this.$store.getters.getScreen])
 		}
 	}
 }

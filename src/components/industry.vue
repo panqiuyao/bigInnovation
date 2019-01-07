@@ -85,7 +85,7 @@ export default {
 	.btn-one .el-carousel__arrow.el-carousel__arrow--left { left:-.7rem;}
 	.industry a { height: 3.3rem;}
 	.industry .el-carousel__container { height: 3.6rem;}
-	.industry .el-carousel__container a { position: relative; color: fontColor; font-size: 0.3rem; line-height: 0.5rem; border-radius:20px; text-align: center; font-weight: 600;}
+	.industry .el-carousel__container a { position: relative; color: fontColor; font-size: 0.3rem; line-height: 0.5rem; border-radius:.1rem; text-align: center; font-weight: 600;}
 	.industry .el-carousel__container a:hover:before { display: block; width: 100%; height: 100%; border-radius:0.1rem; position: absolute; left:0; top:0; background: rgba(255,255,255,.5); content: '';}
 	.industry .el-carousel__container .three-link  a { height: 1.6rem; box-sizing: border-box;     overflow: hidden;}
 	.industry .el-carousel__container .three-link a:nth-child(1) { width: 48.5%; float: left; margin-bottom: 0.125rem; }

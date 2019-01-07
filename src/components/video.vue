@@ -65,7 +65,9 @@ export default {
 			return   configRouter.video[self.$route.params.id]
 			
 		},
-		worldMap:() => worldMap
+		worldMap(){
+			return  this.$store.getters.getWorldMap;
+		}
 	},
 	created(){
 		var self =this;

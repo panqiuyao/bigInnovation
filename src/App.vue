@@ -9,7 +9,23 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
+  beforeCreate(){
+  		var self = this;
+	   try{
+
+          new QWebChannel(qt.webChannelTransport, function(channel){
+                      var worldMap = channel.objects.worldMap;
+					  self.$store.dispatch('fetchWorldMap',{data:worldMap})
+
+                  }
+          )
+
+        }catch(e){
+          console.log(e)
+        }
+	}
 }
 </script>
 
@@ -39,4 +55,5 @@ export default {
 
 	.mh {filter:blur(.2rem);}
 	.anm    {    transition: all 0.5s ease-in-out;}
+	.po-r { position:relative;}
 </style>

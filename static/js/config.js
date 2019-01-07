@@ -13,7 +13,7 @@ var config = {
 	 	},
 	 	"3":{
 	 		"big":"video3.mp4",
-	 		"small":"video3.mp4",
+	 		"small":"video6.mp4",
 	 	},
 	 	"4":{
 	 		"big":"video4.mp4",
@@ -53,11 +53,11 @@ var config = {
 			},
 			{
 				"img":"/static/images/craftsman.png",
-				"url":"/home/craftsman"
+				"url":"/home/center"
 			},
 			{
 				"img":"/static/images/3d.png",
-				"url":"/home/3d"
+				"url":"/home/center"
 				
 			}
 		],
@@ -71,7 +71,7 @@ var config = {
 			{
 				"img":"/static/images/center2.png",
 				"title":"创新中心简介",
-				"url":"/centercon/center2/12",
+				"url":"/home/comcon/centerppt",
 			},
 			{
 				"img":"/static/images/center3.png",
@@ -175,7 +175,7 @@ var config = {
 							"url":"/home/comcon/industry10"
 						}	,
 						{
-							"title":"阿里云+</br>工业大脑+</br>物联网",
+							"title":"云+</br>工业大脑+</br>物联网",
 							"bgColor":"#3a50ae",
 							 "url":"/home/comprehensive/industry?page=1"
 						}	,
@@ -600,43 +600,44 @@ var configRouter = {
 							"name":"饶子和",
 							"desc":"分子生物物理与</br>结构生物学家",
 							"img":"/static/images/personnel3img1.jpg",
-							"descCon":"分子生物物理与结构生物学家",
-							"content":"毕业于中国科学技术大学、澳大利亚墨尔本大学；</br>中国科学院院士；第三世界科学院院士；</br>中国分子生物物理与结构生物学家；中国科学院生物物理所所长、学术委员会主任；</br>天津国际生物医药联合研究院院长；生物大分子国家重点实验室主任；</br>中国生物物理学会理事长；国际纯粹与应用生物物理联合会理事会执行理事、主席；</br>国家“973”、“863”和“自然科学基金”专家顾问组成员；教育部“长江学者特聘教授”，清华大学长江学者特聘教授；前南开大学校长，南开大学滨海学院校长"
+							"descCon":"　分子生物物理与结构生物学家",
+							"content":"毕业于中国科学技术大学、澳大利亚墨尔本大学</br>中国科学院院士；第三世界科学院院士</br>中国分子生物物理与结构生物学家、中国科学院生物物理所所长、学术委员会主任、天津国际生物医药联合研究院院长、生物大分子国家重点实验室主任、中国生物物理学会理事长、国际纯粹与应用生物物理联合会理事会执行理事、主席</br>国家“973”、“863”和“自然科学基金”专家顾问组成员、教育部“长江学者特聘教授”、清华大学长江学者特聘教授、前南开大学校长，南开大学滨海学院校长"
 						},
 						{
 							"name":"张辉",
 							"desc":"国家特聘专家</br>国家级高层次人才",
 							"img":"/static/images/personnel3img2.jpg",
-							"descCon":"国家特聘专家国家级高层次人才",
-							"content":"美国加州大学伯克利分校电子工程博士，获得百余项科技专利，</br>荣获信息产业重大技术发明奖、北京市科学技术一等奖、国家科技进步一等奖。</br>先后被评为“中国软件行业杰出青年”及“北京市十大杰出青年”。</br>国家级高层次人才并获得国家特聘专家称号, 全国青联常委"
+							"descCon":"　国家特聘专家　国家级高层次人才",
+							"content":"美国加州大学伯克利分校电子工程博士，获得百余项科技专利，荣获信息产业重大技术发明奖、北京市科学技术一等奖、国家科技进步一等奖</br>先后被评为“中国软件行业杰出青年”及“北京市十大杰出青年”。国家级高层次人才并获得国家特聘专家称号, 全国青联常委"
 						},
 						{
 							"name":"陶建华",
 							"desc":"中国科学院</br>自动化研究所研究员",
 							"img":"/static/images/personnel3img3.jpg",
-							"descCon":"中国科学院自动化研究所研究员",
-							"content":"中国科学院自动化研究所研究员、所长助理。</br>模式识别国家重点实验室副主任、博士生导师。</br>国家杰出青年基金获得者，国家“万人计划”科技创新领军人才 。</br>中国计算机学会常务理事，中国人工智能学会理事，中国中文信息学会理事，中国图象图形学会人机交互专委会主任"
+							"descCon":"　中国科学院自动化研究所研究员",	
+							"content":"中国科学院自动化研究所研究员、所长助理，模式识别国家重点实验室副主任、博士生导师</br>国家杰出青年基金获得者，国家“万人计划”科技创新领军人才</br>中国计算机学会常务理事，中国人工智能学会理事，中国中文信息学会理事，中国图象图形学会人机交互专委会主任"
+						
 						},
 						{
 							"name":"周雯",
 							"desc":"中国科学院</br>心理研究所研究员",
 							"img":"/static/images/personnel3img4.jpg",
-							"descCon":"中国科学院心理研究所研究员",
-							"content":"博士，中国科学院心理研究所研究员。</br>04年毕业于北京大学心理学系，09年于美国Rice University获心理学博士学位，</br>中科院“百人计划”、中组部“万人计划”青年拔尖人才、“长江学者奖励计划”青年学者"
+							"descCon":"　中国科学院心理研究所研究员",
+							"content":"博士，中国科学院心理研究所研究员</br>04年毕业于北京大学心理学系，09年于美国Rice University获心理学博士学位</br>中科院“百人计划”、中组部“万人计划”青年拔尖人才、“长江学者奖励计划”青年学者"
 						},
 						{
 							"name":"王振宇",
 							"desc":"哈佛生物统计系博士</br>国家级高层次人才",
 							"img":"/static/images/personnel3img5.jpg",
-							"descCon":"哈佛生物统计系博士国家级高层次人才",
-							"content":"哈佛生物统计系博士，国家级高层次人才，</br>曾先后在美国高盛集团、大鹏证券等企业任职。</br>现为上海企树网络科技有限公司董事长，致力于企业公共云平台与企业大数据的研发与应用"
+							"descCon":"　哈佛生物统计系博士　国家级高层次人才",
+							"content":"哈佛生物统计系博士，国家级高层次人才</br>曾先后在美国高盛集团、大鹏证券等企业任职</br>现为上海企树网络科技有限公司董事长，致力于企业公共云平台与企业大数据的研发与应用"
 						},
 						{
 							"name":"程功弼",
 							"desc":"中国民主同盟盟员</br>国家级高层次专家",
 							"img":"/static/images/personnel3img6.jpg",
-							"descCon":"中国民主同盟盟员国家级高层次专家",
-							"content":"中国民主同盟盟员。</br>国家级高层次专家，姑苏创新创业领军人才，苏州工业园区科技领军人才。</br>从事环境地质研究工作近20年，作为第一发明人申报国家专利100多项。</br>南京大学苏州研究生院兼职教授、MBA课外创业导师、苏州环保产业协会理事、苏州海归人才协会理事"
+							"descCon":"　中国民主同盟盟员　国家级高层次专家",
+							"content":"中国民主同盟盟员</br>国家级高层次专家，姑苏创新创业领军人才，苏州工业园区科技领军人才</br>从事环境地质研究工作近20年，作为第一发明人申报国家专利100多项</br>南京大学苏州研究生院兼职教授、MBA课外创业导师、苏州环保产业协会理事、苏州海归人才协会理事"
 						}
 				]
 			},
@@ -723,6 +724,105 @@ var configRouter = {
 
 	],
 
+	//部分创新PPT
+	"centerppt":[
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt1header1.png",
+				"img":"/static/images/centerppt1img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt2header1.png",
+				"img":"/static/images/centerppt2img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt3header1.png",
+				"img":"/static/images/centerppt3img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt4header1.png",
+				"img":"/static/images/centerppt4img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt5header1.png",
+				"img":"/static/images/centerppt5img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt7header1.png",
+				"img":"/static/images/centerppt7img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt8header1.png",
+				"img":"/static/images/centerppt8img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt6header1.png",
+				"img":"/static/images/centerppt6img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt9header1.png",
+				"img":"/static/images/centerppt9img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt10header1.png",
+				"img":"/static/images/centerppt10img1.png"
+    		},
+    		{
+				"back":false,
+				"logo":true,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt11header1.png",
+				"img":"/static/images/centerppt11img1.png"
+    		},
+    		{
+				"back":true,
+				"logo":false,
+				"search":false,
+				"rightNav":"hide",
+				"headerImg":"/static/images/centerppt12header1.png",
+				"img":"/static/images/centerppt12img1.png"
+    		}
+	],
 	//部分创新中心 
 	"center1":[
 
@@ -735,7 +835,7 @@ var configRouter = {
 				"img":"/static/images/center1img1.png",
     			"id":"IC1528001261375",
     			"name":"宁波东部新城创新中心",
-    			"str":'{"name":"宁波创新中心","mark":"70-85-C2-81-D2-9A"}'
+    			"str":'{"name":"宁波创新中心","mark":"94-C6-91-7E-C5-4E"}'
     		},
     		{
 				"back":true,
@@ -746,7 +846,7 @@ var configRouter = {
 				"img":"/static/images/center1img2.png",
     			"id":"IC1528001584312",
     			"name":"苏州创新中心",
-    			"str":'{"name":"苏州创新中心","mark":"70-85-C2-81-D2-9A"}'
+    			"str":'{"name":"苏州创新中心","mark":"00-E0-4C-06-80-5B"}'
     		}
 	],
 	//2018中国台州全球高层次创业大赛

@@ -12,6 +12,7 @@ const state  = {
 	leftnav:"innovation",
 	rightnav:true,
 	screen:"big",
+	worldMap:false, //qt对象
 }
 const getters = {
 		//顶部返回
@@ -45,7 +46,13 @@ const getters = {
 		//左边nav
 		getScreen(state) {
 			return state.screen
+		},
+		//左边nav
+		getWorldMap(state) {
+			return state.worldMap
 		}
+
+
 }
 const mutations  = {
 	//顶部返回
@@ -80,7 +87,13 @@ const mutations  = {
 	//左边nav
 	setScreen(state,data) {
 	     state.screen = data
+	},
+	//左边nav
+	setWorldMap(state,data) {
+	     state.worldMap = data
 	}
+
+
 
 }
 const actions = {
@@ -116,7 +129,13 @@ const actions = {
 	fetchScreen(self,data){
 
 			self.commit('setScreen',data.data)
+	} ,
+	//左边nav
+	fetchWorldMap(self,data){
+			self.commit('setWorldMap',data.data)
 	} 
+
+	
 }
 
 

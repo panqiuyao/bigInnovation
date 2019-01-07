@@ -18,10 +18,10 @@
 									 </a>
 								</template>
 								<template v-else>
-							    <router-link :to="item.url"> 
+							    	<router-link :to="item.url"> 
 										<img :src="item.images">
 										<div class="item-title flex cententtitle">{{item.title}}</div>
-								</router-link>
+									</router-link>
 								</template>
 
 						  </el-col>
@@ -50,7 +50,7 @@
 										<el-carousel-item v-if="item  == Math.ceil(listData[0].children.length/5)">
 												<el-row>
 											
-													<el-col  :span="5" v-for="itemchild,indexchild in listData[0].children.length-index*5 " class="item" >	
+													<el-col  :span="5" v-for="itemchild,indexchild in listData[0].children.length-index*5 " :key="indexchild" class="item" >	
 														<div class="small"  @click="showpexpert(index,indexchild)">
 															<img :src="listData[0].children[index*5+indexchild].img">
 															<div class="title">
@@ -89,8 +89,7 @@
 									<div class="img"><img :src="expert.img"></div>
 									<div class="cont flex-item">
 										<div class="t">
-											{{expert.name}}
-											<span class="d">{{expert.descCon}}</span>
+											{{expert.name}}<span class="d">{{expert.descCon}}</span>
 										</div>
 										<div class="c" v-html="expert.content"></div>
 									</div>
@@ -112,14 +111,10 @@
 
 
 					<template v-if="worldMap">
-						 <a  class="personnel1" href="javascript:" @click="showvideo('/videoplay/2')"> 
-
-						 </a>
+						 <a  class="personnel1" href="javascript:" @click="showvideo('/videoplay/2')"></a>
 					</template>
 					<template v-else>
-						 <router-link to="/videoplay/2" class="personnel1"> 
-
-						 </router-link>
+						 <router-link to="/videoplay/2" class="personnel1"> </router-link>
 					</template>
 					<img :src="listData[0].img" >
 
@@ -135,7 +130,29 @@
 						  <div class="comconcarousel">
 						    <el-carousel height="100%" :autoplay="false" :loop="false" :interval="3000" arrow="always" class="conmain" @change="change">
 						      <el-carousel-item v-for="(item,index) in listData" :key="item" class="flex" >
-										<a href="javascript:" class="flex" @click="dojoin(item.id,item.name,item.str)"><img :src="item.img" width="100%"></a>
+						      			<div class="po-r">
+											<a href="javascript:" class="center1link" @click="dojoin(item.id,item.name,item.str)"></a>
+											<img :src="item.img" width="100%">
+										</div>
+						      </el-carousel-item>
+						    </el-carousel>
+						  </div>
+
+		</template>
+
+
+
+		<template v-else-if="this.$route.params.id == 'centerppt'" >
+
+			<!--部分创新中心-->
+						 <div class="pptback" v-on:click="prevpage()" ></div>
+						  <div class="comconcarousel centerppt">
+						    <el-carousel height="100%" :autoplay="false" :loop="false" :interval="3000" arrow="always" class="conmain" @change="change">
+						      <el-carousel-item v-for="(item,index) in listData" :key="item" class="flex" >
+						      			<div class="po-r">
+											<a href="javascript:" class="center1link" @click="dojoin(item.id,item.name,item.str)"></a>
+											<img :src="item.img" width="100%">
+										</div>
 						      </el-carousel-item>
 						    </el-carousel>
 						  </div>
@@ -146,34 +163,65 @@
 		<template  v-else-if="this.$route.params.id == 'industry1'" >
 
 				<!--3d协同-->
-				<a href="javascript:" class="flex" @click="dojoin(listData[0].id,listData[0].name,listData[0].str)"><img :src="listData[0].img" ></a>
+				<div class="po-r">
+				<a href="javascript:" class="industry1link" @click="dojoin(listData[0].id,listData[0].name,listData[0].str)"></a>
+				<img :src="listData[0].img" >
+				</div>
+
+
+		</template>
+
+		<template  v-else-if="this.$route.params.id == 'industry2'" >
+
+		
+						  <div class="comconcarousel">
+						    <el-carousel height="100%" :autoplay="false" :loop="false" :interval="3000" arrow="always" class="conmain" @change="change">
+
+
+
+									<template v-if="worldMap">
+									      <el-carousel-item  class="flex" >
+									      			<div class="po-r">
+														<a href="javascript:" class="industry1link" @click="worldMap.doShell(listData[0].url)" ></a>
+														<img :src="listData[0].img" width="100%">
+													</div>
+									      </el-carousel-item>
+									</template>
+									<template v-else>
+									      <el-carousel-item  class="flex" >
+									      			<div class="po-r">
+														<a  :href="listData[0].url" class="industry1link" target="_blank" ></a>
+														<img :src="listData[0].img" width="100%">
+													</div>
+									      </el-carousel-item>
+									</template>
+
+							      <el-carousel-item  class="flex" >
+							      			<div class="po-r">
+												<img :src="listData[1].img" width="100%">
+											</div>
+							      </el-carousel-item>
+						    </el-carousel>
+						  </div>
 
 
 		</template>
 
 
+
 		<template v-else>
-
-				
-					<template  v-if="listData.length == 1">
-						    	<router-link :to="listData[0].url"  class="flex"> 
-									<img :src="listData[0].img" >
-								</router-link>
-
-					</template>
-					<template  v-else>
-
-
 
 
 						  <div class="comconcarousel">
 						    <el-carousel height="100%" :autoplay="false" :loop="false" :interval="3000" arrow="always" class="conmain" @change="change">
+
 						      <el-carousel-item v-for="item,index in listData" :key="index" class="flex" >
 								<template  v-if="item.url.indexOf('http') >= 0">
+
 									<template v-if="worldMap">
-							    		<router-link to="javascript:" @click="worldMap.doShell(item.url)" class="flex"> 
+							    		<a href="javascript:" @click="worldMap.doShell(item.url)" class="flex"> 
 											<img :src="item.img" width="100%">
-										</router-link>
+										</a>
 									</template>
 									<template v-else>
 							    		<a :href="item.url" target="_blank" class="flex"> 
@@ -182,18 +230,41 @@
 									</template>
 
 								</template>
+
+								<template  v-else-if="item.url.indexOf('videoplay') >= 0">
+
+									<template v-if="worldMap">
+							    		<a href="javascript:" @click="worldMap.doShell(item.url)" class="flex"> 
+											<img :src="item.img" width="100%">
+										</a>
+									</template>
+									<template v-else>
+									    <router-link :to="item.url" class="flex"> 
+											<img :src="item.img" width="100%">
+										</router-link>
+									</template>
+
+								</template>
+
 								<template v-else>
-							    	<router-link :to="item.url" class="flex"> 
+
+									<template v-if="item.url">
+							    		<router-link :to="item.url" class="flex"> 
+											<img :src="item.img" width="100%">
+										</router-link>
+									</template>
+									<template v-else>
 										<img :src="item.img" width="100%">
-									</router-link>
+									</template>
+
 								</template>
 													   
 			
 						      </el-carousel-item>
+
 						    </el-carousel>
 						  </div>
 
-					</template>
 			
 
 			
@@ -220,6 +291,7 @@ export default {
   },
   watch:{
   		headerid(){
+  			//轮播切换状态 
 
 			var self =this;
 	 				
@@ -234,7 +306,12 @@ export default {
   		}
   },
 	computed:{
-		worldMap:() => worldMap,
+		//qt对象
+		worldMap(){
+
+			return  this.$store.getters.getWorldMap;
+		},
+		//当前数据
 		listData(){
 			var self = this;
 			switch (self.$route.params.id) {
@@ -250,6 +327,7 @@ export default {
 
 	},
 	created(){
+		//修改状态
 		var self =this;
  				
 		self.$store.dispatch('fetchBack',{data:configRouter[this.$route.params.id][self.headerid].back})
@@ -263,15 +341,18 @@ export default {
 		
 	},
 	methods:{
+		//轮播切换状态
 		change(i){
 				this.headerid = i;
 
 		},
+		//显示视频
 		showvideo(url){
 			var self = this;
 			var videourl = url.split('/')[2]
 			self.worldMap.doPlayVideo('video'+videourl+'.mp4')
 		},
+		//加会
 		dojoin(id,name,str){
 			var self = this;
 			try {
@@ -284,6 +365,7 @@ export default {
 			
 
 		},
+		//显示专家
 		showpexpert(index,indexChild){
 				var self = this;
 				self.popupStyle.left = event.clientX+'px';
@@ -301,6 +383,7 @@ export default {
 				},100)
 
 		},
+		//关闭专家
 		closeexpert(){
 				var self = this;
 				document.querySelector('.header').classList.remove('mh')
@@ -312,6 +395,10 @@ export default {
 					self.popupTckAnm = false;
 				},500)
 
+		},
+		//返回上一页面
+		prevpage(){
+			this.$router.go(-1)
 		}
 	}
 }
@@ -403,7 +490,7 @@ bottom:0  !important;
 .personnel3 { width:100%;}
 .personnel3 .left { width:8.2%;}
 .personnel3 	.flex-item	{ padding:0 0 0 .5rem;}
-.personnel3  .el-carousel__container { padding:0 1rem; height:4rem;}
+.personnel3  .el-carousel__container { padding:0 1rem; height:4rem !important;}
 .personnel3 .btn-one .el-carousel__arrow.el-carousel__arrow--right { right:0}
 .personnel3 .btn-one .el-carousel__arrow.el-carousel__arrow--left { left:0}
 .personnel3 .el-carousel__item .el-row { margin:0 .625rem;}
@@ -437,5 +524,51 @@ bottom:0  !important;
     right: 0.1rem;
     top: 0.1rem;}
     .personnel3  .popup-tck .flex-item { padding: 0 .5rem; }
+
+    /*部分创新中心 */
+ .center1link {     width: 22%;
+    height: 20%;
+    left: 3%;
+    top: 65%; position: absolute; }
+	.industry1link {
+		
+	     width: 18%;
+    height: 20%;
+    left: 80%;
+    top: 60%; position: absolute; }
+
+    /*ppt*/
+
+    .comconcarousel.centerppt .conmain { padding: 0 2% !important; }
+    .comconcarousel.centerppt .el-carousel__arrow--left {
+    	    position: absolute;
+		    width: 50% !important;
+		    height: 100% !important;
+		    left: 0 !important;
+		    background: none !important;
+    }   
+     .comconcarousel.centerppt .el-carousel__arrow--right {
+    	       position: absolute;
+    width: 50% !important;
+    height: 100% !important;
+    right: 0 !important;
+    background: none !important;
+    }
+
+
+    .comconcarousel.centerppt  .el-carousel__item { opacity:0; transform: translateX(0) scale(1) !important;
+
+		transition: all 0.5s ease-in-out !important;
+    }
+   .comconcarousel.centerppt   .el-carousel__item.is-active { opacity:1;}
+   .pptback {
+	    width: 10%;
+	    height: 13%;
+	    position: absolute;
+	    left: 0;
+	    top: -12%;
+	    z-index: 1000;
+	
+   }
 </style>
 

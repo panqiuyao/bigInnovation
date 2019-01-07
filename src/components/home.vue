@@ -3,18 +3,17 @@
 		    <header class="header flex">
 						<el-row>
 							<el-col :span="12" class="flex flex-left flex-item">
-								<img :src="goback" v-if="backstate" style="height: .5rem;"  v-on:click="prevpage()"/>
+								<img :src="goback" v-if="backstate" style="height: .5rem; cursor: pointer;"  v-on:click="prevpage()"/>
 								<img :src="crbernaut" v-if="logostate" style="height: .5rem; margin-top:-0.15rem" />
 								<img :src="headerimg"  style="height: .5rem" />
 								<img :src="search" v-if="searchstate"  style="margin-left: .25rem; height: .5rem"/>
 							</el-col>
 
 
-							<el-col :span="12" class="flex flex-right nav" style="padding-top: .25rem">
+							<el-col :span="12"  v-if="navstate !=  'hide'" class="flex flex-right nav" style="padding-top: .25rem">
 									<a :href="right[0].url" class="hundred"></a>
 									<router-link :to="right[1].url" class="center" :class="{ active : navstate == 'center'}"></router-link>
 									<router-link :to="right[2].url" class="comprehensive" :class="{ active : navstate == 'comprehensive'}"></router-link>
-								
 							</el-col>
 						</el-row>
 				</header>

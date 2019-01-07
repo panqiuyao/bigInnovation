@@ -1,7 +1,8 @@
 <template>
-		
+
   <el-row  :gutter="0">
 			<el-col  :span="8"  class="item-list" v-for="(item,index) in list" :key="item.url">
+			
 					<template v-if="worldMap && item.url.indexOf('videoplay') > 0">
 						    <a href="javascript:" @click="showvideo(item.url)"> 
 									<img :src="item.img">
@@ -38,12 +39,13 @@ export default {
 			this.$store.dispatch('fetchSearch',{data:false})
 			this.$store.dispatch('fetchLogo',{data:true})
 	},
-	mounted(){
-
-	},
 	computed:{
-		worldMap:() => worldMap
+		worldMap(){
+			return  this.$store.getters.getWorldMap;
+		}
 		
+	},
+	mounted(){
 	},
 	methods:{
 		change(e){
